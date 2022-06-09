@@ -3,6 +3,10 @@
 /**
  * add - adds two integers and returns the result
  *
+ * @a: to be added to a
+ *
+ * @b: to be added to b
+ *
  * Return: sum of a and b
  */
 int add(int a, int b)
