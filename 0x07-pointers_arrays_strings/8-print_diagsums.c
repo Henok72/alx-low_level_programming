@@ -1,20 +1,24 @@
+#include <stdio.h>
 #include "main.h"
 
 /**
- * _memcpy - copies memory area
- * @dest: destination memory area
- * @src: memory area to copy from
- * @n: number of bytes to copy
- * Return: pointer to dest
+ * print_diagsums - prints the sum of the two diagonals
+ * of a square matrix of integes
+ * @a: square matrix of which we print the sum of diagonals
+ * @size: size of the matrix
  */
-char *_memcpy(char *dest, char *src, unsigned int n)
+void print_diagsums(int *a, int size)
 {
-	unsigned int i;
+	int i;
+	unsigned int sum, sum1;
 
-	for (i = 0; i < n; i++)
+	sum = 0;
+	sum1 = 0;
+
+	for (i = 0; i < size; i++)
 	{
-		dest[i] = src[i];
+		sum += a[(size * i) + i];
+		sum1 += a[(size * (i + 1)) - (i + 1)];
 	}
-
-	return (dest);
+	printf("%d, %d\n", sum, sum1);
 }
